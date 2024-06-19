@@ -1,7 +1,7 @@
 from firebase import firebase
 import datetime
 
-fb = firebase.FirebaseApplication('enter your link here ',None)
+fb = firebase.FirebaseApplication('Use your own database link ',None)
 
 
 def postData(name, time):
@@ -12,8 +12,7 @@ def postData(name, time):
     }
 
     dateToday = datetime.date.today().strftime('%Y-%m-%d')
-    print(dateToday)
-    # fb.post(f'/{dateToday}',data)
+    fb.post(f'/{dateToday}',data)
 
 if __name__ == "__main__":
     postData('Kat', '30')
