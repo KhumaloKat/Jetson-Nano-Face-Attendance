@@ -13,22 +13,27 @@ class ledRBG():
         GPIO.setup(self.G, GPIO.OUT)
     
     def color(self, myColor):
+        
         if myColor == 'red':
             GPIO.output(self.R, GPIO.LOW)
             GPIO.output(self.B, GPIO.HIGH)
             GPIO.output(self.G, GPIO.HIGH)
+            
         elif myColor == 'blue':
             GPIO.output(self.R, GPIO.HIGH)
             GPIO.output(self.B, GPIO.LOW)
             GPIO.output(self.G, GPIO.HIGH)
+            
         elif myColor == 'green':
             GPIO.output(self.R, GPIO.HIGH)
             GPIO.output(self.B, GPIO.HIGH)
             GPIO.output(self.G, GPIO.LOW)
+            
         elif myColor == 'off':
             GPIO.output(self.R, GPIO.HIGH)
             GPIO.output(self.B, GPIO.HIGH)
             GPIO.output(self.G, GPIO.HIGH)
+            
         elif myColor == 'white':
             GPIO.output(self.R, GPIO.LOW)
             GPIO.output(self.B, GPIO.LOW)
